@@ -11,6 +11,7 @@ accountcity ="jaipur";
 
 /*
 prefer not use var.
+because of issue in block scope and functional scope
 */
 // console.log(accountid,accountemail,accountname,accountcity);
 console.table([accountid,accountname,accountemail,accountcity,accountstate]);

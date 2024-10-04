@@ -15,8 +15,8 @@ let isnumber = Number(score);
 let bool = 222;
 
 let boolean = Boolean(bool)
-console.log(typeof boolean);
-console.log(boolean);
+// console.log(typeof boolean);
+// console.log(boolean);
 
 // 1 => true; 
 // 0 => false; 
@@ -29,5 +29,18 @@ console.log(boolean);
 let somenumber = "322";
 
 let strignumber = String(somenumber)
-console.log(typeof strignumber)
-console.log(strignumber);
+// console.log(typeof strignumber)
+// console.log(strignumber);
+
+// #####################operation######################
+ let str1 = "balva";
+ let str2 =" aliraza"
+ let str3 = str1 + str2;
+ 
+ console.log(str3);
+
+ console.log(1+"2");
+ console.log("1" + 2);
+ console.log("1" + 2 + 3);
+ console.log(1 + 2 + "3");
+

@@ -43,12 +43,37 @@ let myobj = {
 
 // array : typeof => object
 let Myarray = ["ali","raza","balva"];
-console.log(Myarray);
-console.log(typeof Myarray);
+// console.log(Myarray);
+// console.log(typeof Myarray);
 
 // function  : typeof => function
 let myfunction = function(){
     console.log("function");
 }
-console.log(myfunction)
-console.log(typeof myfunction)
+// console.log(myfunction)
+// console.log(typeof myfunction)
+
+// ***************************Memory***********************
+// Stack(primitive) & Heap(nonprimitive)
+
+// stack
+let name = "balva";
+
+let anothername = name;
+anothername ="aliraza";
+
+// console.log(anothername)
+// console.log(name);
+
+// heap
+
+let userone ={
+    name: "ali",
+    age:21
+}
+let usertwo = userone;
+
+usertwo.age = 22;
+
+console.log(userone);
+console.log(usertwo);

@@ -1,3 +1,5 @@
+
+
 // function saymyname () {
 //     console.log("a");
 //     console.log("l");
@@ -47,3 +49,27 @@ console.log(name());// output : undefined logged
 console.log(name("gfds"));
 
 
+const user = {
+    username :"ali",
+    price :300
+}
+
+function cartuser(anyObject){
+    return console.log(`username : ${anyObject.username} and price : ${anyObject.price}`);
+    
+}
+cartuser(user)
+
+cartuser({
+    username :"aaa",
+    price:300
+})
+
+const myarr = [10,20,30,40];
+
+function newarry(arr){
+return console.log(`price is ${arr[1]}`);
+
+}
+newarry(myarr)
+newarry([10,30,40,48]);

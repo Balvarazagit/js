@@ -18,12 +18,41 @@ const reguser = {
     },
     email : "bal@gmail.com",
 }
-console.log(reguser.fullname.username.lastname);
+// console.log(reguser.fullname.username.lastname);
 
 const obj1 = {1:"a",2:"b"}
 const obj2 = {3:"c",4:"d"}
-const obj3 = {obj1,obj2}
+// const obj3 = {obj1,obj2}
 
-console.log(obj3);
+// console.log(obj3);
 
-console.log(Object.assign(obj1,obj2));
+// console.log(Object.assign(obj1,obj2));
+
+// spread operation
+console.log({...obj1,...obj2});
+
+const user =[
+    {
+        name:"a",
+        email: "a@gmail.com"
+    },
+    {
+        name:"b",
+        email: "b@gmail.com"
+    },
+    {
+        name:"c",
+        email: "c@gmail.com"
+    },
+]
+console.log(user[2].email);
+
+console.log(tinder);
+console.log(Object.keys(tinder));
+console.log(Object.values(tinder));
+console.log(Object.entries(tinder));
+
+console.log(tinder.hasOwnProperty('islogged'));
+
+
+

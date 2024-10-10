@@ -21,6 +21,6 @@ let score1 = 20;
 let score2 = 30;
 let score3= 40;
 
-console.log(Array.of(score1,score2,score3))
+console.log(Array.of(score1,score2,score3));
 
 

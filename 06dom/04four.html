@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM With BAR</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage (langName){
+        const myli = document.createElement('li');
+        myli.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(myli);
+    }
+    addlanguage('python')
+    addlanguage('PHP')
+function optimize (lang){
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(lang));
+    document.querySelector('.language').appendChild(li)
+}
+optimize('java')
+
+// edit 
+const secondlang = document.querySelector('li:nth-child(2)')
+const li = document.createElement('li');
+li.textContent='mongo';
+secondlang.replaceWith(li)
+
+//edit
+const firstlang = document.querySelector('li:first-child')
+firstlang.outerHTML = '<li>Typescript</li>'
+
+// remove
+const lastlang = document.querySelector('li:last-child')
+lastlang.remove()
+</script>
+</html>

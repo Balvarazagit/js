@@ -62,7 +62,7 @@ numguess++;
 remaining.innerHTML = `${11-numguess}`;
 }
 function displaymessage(message){
-    lowori.innerHTML = `<h2>${message}</h2>`
+    lowori.innerHTML = `<h2>${message}</h2>`;
 }
 function endgame(){
 

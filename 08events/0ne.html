@@ -28,9 +28,55 @@
     
     // best approach
 
-    document.getElementById('japan').addEventListener('click',function(){
-        alert('japan')
+    // document.getElementById('japan').addEventListener('click',function(){
+    //     alert('japan')
+    // })
+    //type,timestamp,defaultPrevented
+    //target,srcElement, toElement, currentTarget
+    //clientX,clientY,screenX,screenY
+    //altkey, ctrlkey,shiftKey,keyCode
+
+    //Event progation => 1.bubbling: from self to parents elements(small to big) :
+    //document.getElementById('images').addEventListener('click', function(){
+    //  console.log('clicked inside in the ul');   
+    //},false)
+    //document.getElementById('owl').addEventListener('click', function(){
+      //  console.log('clicked on the owl');  
+    //},false)
+
+    //             2.capturing: from parents o self elements(big to small) : 
+    // document.getElementById('images').addEventListener('click', function(){
+    //  console.log('clicked inside in the ul');   
+   // },true)
+   //document.getElementById('owl').addEventListener('click', function(){
+    //console.log('clicked on the owl');
+    //},true)
+
+    // document.getElementById('images').addEventListener('click', function(){
+    //     console.log('clicked inside in the ul');
+        
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log('clicked on the owl');
+    //     e.stopPropagation(); // not go parents element
+    // },true)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log('google clicked');
+    // })
+
+    document.getElementById('images').addEventListener('click',function(e){
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            
+            console.log(e.target.parentNode);
+            e.target.parentNode.remove();
+        }
+        
+       
     })
-    
 </script>
 </html>

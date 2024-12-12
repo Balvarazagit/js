@@ -10,6 +10,27 @@
     <button id="stop">Stop</button>
 </body>
 <script>
-    
+    const saybalva = function(){
+        console.log('balva');
+        
+    };
+    setTimeout(saybalva,1000)
+
+    const changeme = function(){
+        document.querySelector('h1').innerHTML = 'Balva'
+    };
+
+   const changeinner=  setTimeout(changeme,2000)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeinner);
+        console.log("stoped");
+        
+    })
+
+
+    // setInterval(() => {
+    //     console.log('aliraza')
+    // }, 1000);
 </script>
 </html>

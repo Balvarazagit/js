@@ -11,6 +11,39 @@
     <button id="stop">Stop</button>
 </body>
 <script>
+//     let h1 = document.querySelector('h1');
+
+//    const h1change = function(){
+//     h1.innerHTML = 'balva';
+//    } 
+//    const stoped = setTimeout(h1change,2000)
+
+//     document.querySelector('#stop').addEventListener('click',function(){
+//         clearTimeout(stoped)
+//         console.log('stopped');
+        
+//     })
+
+//     document.querySelector('#start').addEventListener('click',function(){
+//         setTimeout(h1change,2000)
+//         console.log('changed')
+//     })
+
+    const sayali = function(){
+        console.log("ali");
+    }
+
+   const intervalid = setInterval(sayali, 1000)
+
+   document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(intervalid)
+         console.log('stopped');
+             })
     
+    document.querySelector('#start').addEventListener('click',function(){
+        setInterval(sayali,1000)
+         console.log('started');
+             })        
+
 </script>
 </html>

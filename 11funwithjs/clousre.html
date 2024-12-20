@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clousre</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+    <script>
+
+// lexical scope
+
+//         function init() {
+//   var name = "Mozilla"; // name is a local variable created by init
+//   function displayName() {
+//     // displayName() is the inner function, that forms a closure
+//     console.log(name); // use variable declared in the parent function
+//   }
+//   displayName();
+// }
+// init();
+
+
+// function outer(){
+//     let username = "ali";
+//     function inner(){
+//         console.log("inner function",username);
+//         // let secret = "my123";
+        
+//     }
+//     function innertwo (){
+//         console.log("inner two",username);
+// // console.log(secret); not acceses
+
+//     }
+//     innertwo()
+//     inner()
+// }
+// outer()
+// console.log("outer function",username);
+
+// clousre
+
+function makeFunc() {
+  const name = "Mozilla";
+  function displayName() {
+    console.log(name);
+  }
+  return displayName;
+}
+
+const myFunc = makeFunc();
+myFunc();
+
+
+    </script>
+    <script>
+        // const orange = document.getElementById('orange');
+        // const green = document.getElementById('green');
+        // const body = document.querySelector('body')
+
+        // orange.addEventListener('click',()=>{
+        //     body.style.backgroundColor = 'orange'
+        // })
+        // green.addEventListener('click',()=>{
+        //     body.style.backgroundColor = 'green'
+        // })
+
+        function clickhandler(color){
+            // document.body.style.backgroundColor = `${color}`
+            return function (){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+        document.getElementById('orange').onclick = clickhandler("orange");
+        document.getElementById('green').onclick = clickhandler("green")
+    </script>
+</body>
+</html>

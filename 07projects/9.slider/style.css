@@ -73,9 +73,14 @@ h1 {
     margin: auto;
     margin-top: 20px;
     position: relative;
+    overflow: hidden;
 }
 .slide{
     width: 100%;
     height: 100%;
     position: absolute;
+    transition: all ease-in;
+}
+.buttons{
+    text-align: center;
 }

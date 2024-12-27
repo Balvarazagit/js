@@ -87,6 +87,7 @@ h1 {
     outline: none;
     color: white;
      text-align: right;
+     font-size: 20px;
 }
 #input::placeholder{
     color: white;
@@ -107,5 +108,13 @@ padding: 20px;
 border: none;
 background: transparent;
 color: white;
-box-shadow: 8px 8px 15px #aaa;
+box-shadow: 8px 8px 15px rgb(255, 255, 255, 0.1);
+cursor: pointer;
+font-size: 20px;
+}
+.row .equalbtn{
+    background-color: orange;
+}
+.row .operator{
+    color: green;
 }
